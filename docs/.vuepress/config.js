@@ -39,6 +39,7 @@ export default defineUserConfig({
           { //Android Specific
             text: 'Android Specific',
             prefix: 'Android',
+          	sidebarDepth: 1,
             collapsible: true,
             children: [
 								'PARSINGERROR', // "Error while parsing the package" error fix.
@@ -55,7 +56,18 @@ export default defineUserConfig({
 								'SHADERS', // Look what we got here.
 								'RENDERERS', // I have no idea what they do and why PojavLauncher needs it.
 							],
+          },
+          {//iOS Specific
+              text: 'iOS-specific', // Subcategory for iOS FAQ
+							collapsible: true,
+	            prefix: 'iOS',
+              sidebarDepth: 1,
+							children: [
+								'JIT', // iOS and "JIT"
+								'APPSTORE', // Will PojavLauncher ever come to App Store for iOS?
+							]
           }
+
         ],
       },
     ]// End of children
