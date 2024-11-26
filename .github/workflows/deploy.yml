@@ -26,7 +26,7 @@ jobs:
   deploy:
     environment:
       name: Deploy
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://alexytomi.github.io/ # Temp URL for showcase
     permissions:
       contents: read
       pages: write
