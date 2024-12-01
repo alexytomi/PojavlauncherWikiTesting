@@ -7,6 +7,7 @@ export default defineUserConfig({
   lang: 'en-US',
   title: 'WIP Pojav Refactor',
   description: 'heehee',
+  base: 'vuepress-site',
   bundler: viteBundler(),
   plugins: [
     searchPlugin({
