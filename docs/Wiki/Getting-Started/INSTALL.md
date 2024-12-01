@@ -49,19 +49,22 @@ We recommend TrollStore for all users if possible. This method allows for automa
 
 Note: **Enable URL Schemes in TrollStore settings.**
 
-#### TrollStore compatibility depends on whether your iDevice is arm64 (A8-A11) or arm64e (A12+/M1+)
+<div class="hint-container warning"><p class="hint-container-title">TrollStore compatibility depends on whether your iDevice is arm64 (A8-A11) or arm64e (A12+/M1+)
+</p><p></p></div> 
+<!--- Disgusting hack because you can't put a container inside a container with a limited range. Hint containers in hint containers will cover everything below it till both containers end --->
+
 
    ##### For arm64, TrollStore is compatible with the following iOS versions:
-  
+
     - 14.0 to 16.6.1
     - 17.0 
-	- 16.7 to 16.7.10 (*)
- 	- 17.0.1 to 17.7 (*)
-  	- 18.0 (*)
+    - 16.7 to 16.7.10 (*)
+    - 17.0.1 to 17.7 (*)
+    - 18.0 (*)
 
  (*) - requires the palera1n jailbreak
   
-   ##### For arm64e, TrollStore is compatible with the following iOS versions:
+  ##### For arm64e, TrollStore is compatible with the following iOS versions:
   
     - 14.0 to 16.6.1
     - 17.0
