@@ -22,15 +22,64 @@ export default defineUserConfig({
       {
         text: 'Getting Started',
         prefix: 'Wiki/Getting-Started',
-        children: [
-          'INSTALL',
-          'BUILD-FROM-SOURCE',
-          'SIGN-IN',
-          'INSTALL-MC',
-          'CUSTOM-CONTROLS',
-          'DISCORD',
-          ]
+        children: [{
+          text: 'Getting Started',
+          children: [
+            'INSTALL',
+            'BUILD-FROM-SOURCE',
+            'SIGN-IN',
+            'INSTALL-MC',
+            'CUSTOM-CONTROLS',
+            'DISCORD',
+            ]
+        }],
+      },
+      {
+        text: 'FAQ', // I would call this Frequently Asked Questions but it looks weird on mobile
+        prefix: 'Wiki/FAQ',
+        children:[
+          {
+            text: 'General',
+            sidebarDepth: 2, // This option doesn't even do anything because we use markdown-it instead of actual html
+            children: [
+              'RPWORLDNOTSHOWINGUP',
+              'CRASHES',
+              'MODCONFLICT',
+              'JAVAVERSION',
+              'CANTLOGIN',
 
+            ]
+          },
+          { //Android Specific
+            text: 'Android Specific',
+            prefix: 'Android',
+            children: [
+								'PARSINGERROR', // "Error while parsing the package" error fix.
+								'REFUSALOFINSTALL', // "App not installed" error fix. (very uncommon)
+								'CANTFINDLOG', // Can't find the log file. (non-root)
+								'CANTFINDMINECRAFT', // Can't find .minecraft (non-root)
+								'ZINKNOTWORKING', // Zink doesn't work.
+								'MODCRASHING', // Installing any mod results in a crash.
+								'MODNOTSHOWINGUP', // My mods don't show up in-game.
+								'JAVARUNTIMES', // Installing Java runtimes manually.
+								'JARCRASHED', // Crash when executing a jar.
+								'32BIT', // Platform and performance limitations. (32bit)
+								'FFMPEG', // Setting up FFMPEG, for Replay Mod.
+								'SHADERS', // Look what we got here.
+								'RENDERERS', // I have no idea what they do and why PojavLauncher needs it.
+							],
+          },
+          {//iOS Specific
+              text: 'iOS-specific',
+	            prefix: 'iOS',
+              sidebarDepth: 2, // This option doesn't even do anything because we use markdown-it instead of actual html
+							children: [
+								'JIT',
+								'APPSTORE',
+							]
+          }
+
+        ],
       },
       {
         text: 'Contribute to the Wiki!',
