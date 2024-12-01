@@ -1,34 +1,62 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
+import { searchPlugin } from '@vuepress/plugin-search'
 
 export default defineUserConfig({
   lang: 'en-US',
   title: 'WIP Pojav Refactor',
   description: 'heehee',
   bundler: viteBundler(),
+  plugins: [
+    searchPlugin({
+      // options
+    }),
+  ],
   theme: defaultTheme({
     logo: '/images/logo.png',
+    footer: 'footer',
+    license: 'GPLv3',
+    copyright: 'Copyright © 2024, PojavLauncherTeam',
+    navbar: [
+      {
+        text: 'Getting Started',
+        prefix: 'Wiki/Getting-Started',
+        children: [
+          'INSTALL',
+          'BUILD-FROM-SOURCE',
+          'SIGN-IN',
+          'INSTALL-MC',
+          'CUSTOM-CONTROLS',
+          'DISCORD',
+          ]
+
+      },
+      {
+        text: 'Contribute to the Wiki!',
+        link: 'https://github.com/PojavLauncherTeam/PojavLauncherTeam.github.io/',
+      }
+    ],
     sidebar: [
       {
-        text: 'Getting Started', // Subcategory for starting off
+        text: 'Getting Started',
         prefix: 'Wiki/Getting-Started',
-        collapsable: false, // Don't allow collapsing
-        sidebarDepth: 2,
+        collapsible: true,
+        sidebarDepth: 2, // This option doesn't even do anything because we use markdown-it instead of actual html
           children: [
-          'INSTALL', // Installing PojavLauncher
-          'BUILD-FROM-SOURCE', // Building PojavLauncher from source
-          'SIGN-IN', // Signing in
-          'INSTALL-MC', // Downloading Minecraft
-          'CUSTOM-CONTROLS', // Customizing the on-screen controls
-          'DISCORD', // Official PojavLauncher Discord server
+          'INSTALL',
+          'BUILD-FROM-SOURCE',
+          'SIGN-IN',
+          'INSTALL-MC',
+          'CUSTOM-CONTROLS',
+          'DISCORD',
           ]
       },
       {
         text: 'Frequently Asked Questions',
         prefix: 'Wiki/FAQ',
         collapsible: true,
-        sidebarDepth: 1,
+        sidebarDepth: 2, // This option doesn't even do anything because we use markdown-it instead of actual html
 
         children:[
           'RPWORLDNOTSHOWINGUP',
@@ -39,7 +67,7 @@ export default defineUserConfig({
           { //Android Specific
             text: 'Android Specific',
             prefix: 'Android',
-          	sidebarDepth: 1,
+            sidebarDepth: 2, // This option doesn't even do anything because we use markdown-it instead of actual html
             collapsible: true,
             children: [
 								'PARSINGERROR', // "Error while parsing the package" error fix.
@@ -58,13 +86,13 @@ export default defineUserConfig({
 							],
           },
           {//iOS Specific
-              text: 'iOS-specific', // Subcategory for iOS FAQ
+              text: 'iOS-specific',
 							collapsible: true,
 	            prefix: 'iOS',
-              sidebarDepth: 1,
+              sidebarDepth: 2, // This option doesn't even do anything because we use markdown-it instead of actual html
 							children: [
-								'JIT', // iOS and "JIT"
-								'APPSTORE', // Will PojavLauncher ever come to App Store for iOS?
+								'JIT',
+								'APPSTORE',
 							]
           }
 
