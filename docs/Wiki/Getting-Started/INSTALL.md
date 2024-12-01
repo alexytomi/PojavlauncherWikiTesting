@@ -90,7 +90,7 @@ PojavLauncher supports being sideloaded with AltStore and SideStore. Instruction
 2. Install the latest release using this [Install with AltStore](altstore://install?url=https://github.com/PojavLauncherTeam/PojavLauncher_iOS/releases/latest/download/net.kdt.pojavlauncher.ipa) button.
     - For a specific release, you can find its button on the [Releases](https://github.com/PojavLauncherTeam/PojavLauncher_iOS/releases) page
 
-Installing PojavLauncher is not the end for Jailed iOS devices. In order to play Minecraft itself, you will need to [enable JIT](./JIT.md).
+Installing PojavLauncher is not the end for Jailed iOS devices. In order to play Minecraft itself, you will need to [enable JIT](/Wiki/FAQ/iOS/JIT.md).
 :::
 
 ::: details Sideloading (Jailbroken)
@@ -106,20 +106,20 @@ If you want the latest and greatest to test before the official release, you can
 
 1. Start off by heading to the [PojavLauncher iOS](https://github.com/PojavLauncherTeam/PojavLauncher_iOS) repository and switching to the "Actions" tab.
 
-![](./images/Actions/ios/iOS-Actions-1.png)
+![](/images/Actions/ios/iOS-Actions-1.png)
 
 2. Next, select "Development Build" in the workflow selection menu.
 
-![](./images/Actions/ios/iOS-Actions-2.png)
+![](/images/Actions/ios/iOS-Actions-2.png)
 
 3. Choose a build with a green or blue checkmark next to the branch you want to download.
     - `main` will be the one for most people.
 
-![](./images/Actions/ios/iOS-Actions-3.png)
+![](/images/Actions/ios/iOS-Actions-3.png)
 
 4. Under "Artifacts", choose `net.kdt.pojavlauncher.ipa`
 
-![](./images/Actions/ios/iOS-Actions-4.png)
+![](/images/Actions/ios/iOS-Actions-4.png)
 
 Once you have an Actions build downloaded, you can now unzip the file and use this .ipa for TrollStore or sideloading.
 :::
