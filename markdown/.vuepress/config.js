@@ -1,5 +1,5 @@
 const vuepressBar = require('vuepress-bar');
-
+const NavBar = './navbar.js'
 const { sidebar } = vuepressBar({
   addReadMeToFirstGroup: false,
 });
@@ -74,13 +74,7 @@ module.exports = {
         logo: 'logo.png',
 		sidebar: {
 			'/wiki/getting_started/': [
-				{
-					title: 'Guide',
-					collapsable: false,
-					children: [
-					'INSTALL',
-					]
-				}
+				'INSTALL'
 			],
 		},
 	},
